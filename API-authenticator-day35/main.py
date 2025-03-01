@@ -1,13 +1,20 @@
+import os
+
 import requests
 
-API_KEY = "924af808b5caa988a7e03d7bc7fbbb06"
+API_KEY2 = "924af808b5caa988a7e03d7bc7fbbb06"
+
+API_KEY = os.environ.get("OWM_API_KEY")
+# name = os.environ.get("USERNAME")
+# OWM_API_KEY=924af808b5caa988a7e03d7bc7fbbb06
+print(API_KEY)
 
 URL="https://api.openweathermap.org/data/2.5/forecast"
 
 parameters = {
     "lat" : 29.882080,
     "lon" : -97.939987,
-    "appid" : API_KEY,
+    "appid" : API_KEY2,
     "cnt" : 4
 }
 
@@ -20,7 +27,7 @@ need_umbrella = False
 for item in weather_data["list"]:
     if item["weather"][0]["id"] < 700:
         need_umbrella = True
-    print(item["weather"])
+    # print(item["weather"])
 
 if need_umbrella:
     print("Bring umbrella")

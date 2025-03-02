@@ -4,10 +4,15 @@ import requests
 
 API_KEY2 = "924af808b5caa988a7e03d7bc7fbbb06"
 
-API_KEY = os.environ.get("OWM_API_KEY")
+# API_KEY = os.environ.get("OWM_API_KEY")
+# aaa = os.environ.get("AAA")
+# a = os.environ["AAA"]
+
+# print(aaa)
+
 # name = os.environ.get("USERNAME")
 # OWM_API_KEY=924af808b5caa988a7e03d7bc7fbbb06
-print(API_KEY)
+# print(API_KEY)
 
 URL="https://api.openweathermap.org/data/2.5/forecast"
 
